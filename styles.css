@@ -24,22 +24,60 @@ body {
   position: relative; /* Necesario para manejar el posicionamiento del h1 */
 }
 
-/* Estilo para el h1 */
+/* Estilo general para h1 */
 .left h1 {
   font-size: 8rem;
   margin: 0;
-  position: relative; /* Inicialmente está en su posición original */
-  transition: transform 1s ease-in-out; /* Animación para moverlo */
-  z-index: 10; /* Asegura que el h1 esté por encima de otros elementos */
+  position: relative;
+  color: #ffffff;
+  font-family: 'Courier New', monospace; /* Fuente de tipo monoespaciada */
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Oculta el texto que no se ha mostrado */
+  display: inline-block; /* Hace que el h1 sea más pequeño según su contenido */
+  width: fit-content; /* Hace que el ancho sea solo el necesario */
 }
 
-/* Animación cuando se agrega la clase .animate-center */
+/* Animación del cursor tipo código */
+.left h1 span {
+  opacity: 0;
+  animation: showBinary 1s steps(20) infinite, showText 4s forwards;
+}
+
+/* Animación de aparición tipo código binario */
+@keyframes showBinary {
+  0% {
+    content: '0';
+    opacity: 1;
+  }
+  50% {
+    content: '1';
+  }
+  100% {
+    content: '0';
+  }
+}
+
+/* Animación para mostrar el texto al final */
+@keyframes showText {
+  100% {
+    opacity: 1;
+    content: normal;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .animate-center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(30%) translateY(-30%) scale(1.5); /* Mueve al centro horizontal y vertical */
+  transform: translateX(30%) translateY(1%) scale(1.5); /* Mueve al centro */
+  transition: transform 1s ease-in-out; /* Animación para moverlo */
 }
+
 
 /* Estilo para el texto del párrafo */
 .left p {

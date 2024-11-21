@@ -9,7 +9,10 @@
 <body>
     <div class="container">
         <div class="left">
-            <h1>BLOCK CHAIN</h1>
+            <h1 class="binary-text">
+              <span class="block">01001</span><br><span class="chain">100101</span>
+            </h1>
+            
             <p>by Agustín Benítez López<br>Marcos García Jiménez<br>Daniel Gómez Ortiz</p>
               <button id="saberMas">Saber más sobre BLOCK CHAIN</button>
           
@@ -42,25 +45,59 @@
     </div>
 
     <script >
-      document.addEventListener("DOMContentLoaded", () => {
-            const button = document.getElementById("saberMas");
 
-            button.addEventListener("click", () => {
-              const h1 = document.querySelector(".left h1");
-              const p = document.querySelector(".left p");
-              const svg = document.querySelector(".right svg");
+document.addEventListener("DOMContentLoaded", function() {
+  const blockElement = document.querySelector('.block');
+  const chainElement = document.querySelector('.chain');
 
-              // Añadir clases de animación
-              h1.classList.add("animate-center");  // Animación para mover el h1 al centro
-              p.classList.add("fade-out");         // Hacer desaparecer el p
-              svg.classList.add("fade-out");       // Hacer desaparecer el svg
+  // Array de las letras de "BLOCKCHAIN"
+  const blockText = "BLOCK";
+  const chainText = "CHAIN";
+  
+  // Función para cambiar el texto de cada letra con un pequeño intervalo
+  function changeText(element, text, delay) {
+    let index = 0;
+    const interval = setInterval(() => {
+      element.textContent = text.slice(0, index + 1); // Mostrar letra por letra
+      index++;
+      if (index === text.length) {
+        clearInterval(interval); // Detener el intervalo cuando ya se haya mostrado todo el texto
+      }
+    }, delay); // Cambiar cada 200 ms (ajustable)
+  }
 
-              // Redirigir después de 1 segundo
-              setTimeout(() => {
-                window.location.href = "menu.html"; // Cambia esto por tu destino
-              }, 1000);
-            });
-          });
+  // Cambiar el texto de 'BLOCK' y 'CHAIN' letra por letra
+  setTimeout(() => {
+    changeText(blockElement, blockText, 200); // Cambia "BLOCK" cada 200 ms
+  }, 1000); // Esperar 1 segundo antes de empezar a cambiar "BLOCK"
+
+  setTimeout(() => {
+    changeText(chainElement, chainText, 200); // Cambia "CHAIN" cada 200 ms
+  }, 2000); // Esperar 2 segundos antes de empezar a cambiar "CHAIN"
+
+  const button = document.getElementById("saberMas");
+
+  button.addEventListener("click", () => {
+    // Esperamos que la animación del texto termine antes de realizar las siguientes animaciones
+    const h1 = document.querySelector(".left h1");
+    const p = document.querySelector(".left p");
+    const svg = document.querySelector(".right svg");
+
+    // Esperar que el texto "BLOCKCHAIN" haya terminado de escribirse antes de animar el resto
+    setTimeout(() => {
+      // Añadir clases de animación
+      h1.classList.add("animate-center");  // Animación para mover el h1 al centro
+      p.classList.add("fade-out");         // Hacer desaparecer el p
+      svg.classList.add("fade-out");       // Hacer desaparecer el svg
+
+      // Redirigir después de 1 segundo
+      setTimeout(() => {
+        window.location.href = "menu.html"; // Cambia esto por tu destino
+      }, 1000);
+    }, 2000); // Espera que la animación de "BLOCKCHAIN" haya terminado (ajustado para 4 segundos)
+  });
+});
+
     </script>
 </body>
 </html>
