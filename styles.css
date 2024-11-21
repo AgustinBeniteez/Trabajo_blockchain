@@ -111,7 +111,7 @@ button:hover {
 }
 
 /* Estilo del SVG */
-.right svg {
+.right img {
   width: 80%;
   max-width: 400px;
   opacity: 1;
@@ -119,7 +119,7 @@ button:hover {
 }
 
 /* Cuando se añade la clase fade-out, el SVG desaparece */
-.right svg.fade-out {
+.right img.fade-out {
   opacity: 0;
 }
 
