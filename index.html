@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Blockchain</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Diapositiva 1 - Portada -->
+  <div class="slide" id="slide1">
+    <div class="content">
+      <h2>Bienvenido a Blockchain</h2>
+      <p>Descubre cómo funciona Blockchain y su seguridad.</p>
+      <div class="blockchain-function">
+        <!-- SVG que muestra cómo los servidores verifican la tarjeta -->
+        <svg width="1062" height="376" viewBox="0 0 1062 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="206" height="376" rx="21" fill="#4E4141"/>
+            <rect x="856" width="206" height="376" rx="21" fill="#4E4141"/>
+            <rect x="374" y="73" width="262" height="126" rx="21" fill="#AE9696"/>
+            <rect x="374" y="73" width="131" height="57" rx="21" fill="#BC3F3F"/>
+            <path d="M207.5 217.5C254 203 251 149.5 383.5 169" stroke="black" stroke-width="30" stroke-dasharray="7 7"/>
+            <path d="M636 165C694.125 150.425 690.375 96.6462 856 116.248" stroke="black" stroke-width="30" stroke-dasharray="7 7"/>
+            </svg>
+            
+      </div>
+      <button class="next-btn" onclick="goToSlide(2)">Ver más</button>
+    </div>
+  </div>
+
+  <!-- Diapositiva 2 - Opciones -->
+  <div class="slide" id="slide2">
+    <div class="content">
+      <h2>¿Qué te gustaría aprender?</h2>
+      <button class="next-btn" onclick="goToSlide(3)">¿Qué es Blockchain?</button>
+      <button class="next-btn" onclick="goToSlide(4)">Ventajas de Blockchain</button>
+      <button class="next-btn" onclick="goToSlide(5)">Usos de Blockchain</button>
+    </div>
+  </div>
+
+  <!-- Diapositiva 3 - ¿Qué es Blockchain? -->
+  <div class="slide" id="slide3">
+    <div class="content">
+      <h2>¿Qué es Blockchain?</h2>
+      <p>Blockchain es una tecnología de registro descentralizado que permite almacenar información de forma segura, transparente e inmutable.</p>
+      <button class="next-btn" onclick="goToSlide(2)">Volver a Opciones</button>
+    </div>
+  </div>
+
+  <!-- Diapositiva 4 - Ventajas de Blockchain -->
+  <div class="slide" id="slide4">
+    <div class="content">
+      <h2>Ventajas de Blockchain</h2>
+      <ul>
+        <li>Seguridad</li>
+        <li>Transparencia</li>
+        <li>Descentralización</li>
+      </ul>
+      <button class="next-btn" onclick="goToSlide(2)">Volver a Opciones</button>
+    </div>
+  </div>
+
+  <!-- Diapositiva 5 - Usos de Blockchain -->
+  <div class="slide" id="slide5">
+    <div class="content">
+      <h2>Usos de Blockchain</h2>
+      <p>Blockchain se está utilizando en diferentes áreas como criptomonedas, contratos inteligentes, etc.</p>
+      <button class="next-btn" onclick="goToSlide(2)">Volver a Opciones</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
