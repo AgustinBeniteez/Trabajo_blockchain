@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain | INDICE</title>
+  <style>
+    body {
+      background-color: #4B1030;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    nav {
+    width: 29%;
+    background-color: #4B1030;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+    nav img {
+      width: 95%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease, border 0.3s ease;
+      border: 3px solid transparent;
+    }
+
+    nav img:hover {
+      transform: scale(1.05);
+    }
+
+    nav img.selected {
+      border-color: #4B1030;
+      transform: scale(1.1);
+      
+    }
+
+    main {
+      flex-grow: 1;
+      background-color: #4B1030;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      color: white;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeInMain 1s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeInMain {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      margin-top: 30px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background-color: #4B1030;
+      color: white;
+      width: 100%;
+    }
+
+    .image-container {
+      margin-top: 20px;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .image-container button {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInButton 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    margin-top: 15px;
+    padding: 20px 30px;
+    background-color: #6e1144;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 26px;
+    transition: background-color 0.3s ease;
+    } 
+
+    @keyframes fadeInButton {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-container button:hover {
+      background-color: #832c5c;
+    }
+
+    /* Loader overlay */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('fondotrabajo.png'); /* Cambia esto por la ruta de tu imagen */
+      background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+      background-position: center; /* Centra la imagen */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      z-index: 999;
+      opacity: 1;
+      animation: fadeOutLoader 1s ease forwards;
+      animation-delay: 1.3s;
+    }
+
+    @keyframes fadeOutLoader {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="loader"></div>
+  <nav id="nav"><h2 style="color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 2px;">INDICE</h2></nav>
+  <main>
+    <h1 id="main-title">BLOCK CHAIN</h1>
+    <div class="image-container" id="image-container">
+      <img id="main-image" src="" alt="Selected" style="display: none;">
+      <button id="view-more" style="display: none;">Ver más</button>
+    </div>
+  </main>
+
+  <script>
+    // Datos JSON simulados
+    const data = [
+      {
+        title: "¿Que es Blockchain?",
+        image: "https://th.bing.com/th/id/OIP.MKs8g4HL4-X7v8USaJwhQwHaEK?rs=1&pid=ImgDetMain",
+        link: "page1.html"
+      },
+      {
+        title: "¿Para qué sirve Blockchain?",
+        image: "https://marquesfernandes.com/wp-content/uploads/2020/04/blockchain-na-logistica-e-transporte-1.jpg",
+        link: "page2.html"
+      },
+      {
+        title: "¿como funciona un Blockchain?",
+        image: "https://th.bing.com/th/id/OIP.6gI54rfOUl-uZ-o_HAgm4QHaDz?rs=1&pid=ImgDetMain",
+        link: "page3.html"
+      }
+    ];
+
+    const nav = document.getElementById("nav");
+    const mainTitle = document.getElementById("main-title");
+    const mainImage = document.getElementById("main-image");
+    const viewMoreButton = document.getElementById("view-more");
+    let currentSelected = null;
+
+    // Función para mostrar detalles de la imagen seleccionada
+    function showDetails(item, clickedImg) {
+      // Ocultar elementos antes de la animación
+      mainImage.style.display = "none";
+      viewMoreButton.style.display = "none";
+
+      // Remover la clase seleccionada previa
+      if (currentSelected) {
+        currentSelected.classList.remove("selected");
+      }
+
+      // Actualizar título
+      mainTitle.textContent = item.title;
+
+      // Actualizar la imagen principal
+      setTimeout(() => {
+        mainImage.src = item.image;
+        mainImage.style.display = "block"; // Mostrar imagen con animación
+      }, 100);
+
+      // Mostrar botón con animación
+      setTimeout(() => {
+        viewMoreButton.style.display = "inline-block";
+        viewMoreButton.onclick = () => {
+          window.location.href = item.link;
+        };
+      }, 300);
+
+      // Añadir la clase seleccionada
+      clickedImg.classList.add("selected");
+      currentSelected = clickedImg;
+    }
+
+    // Generar las imágenes en el nav
+    data.forEach((item, index) => {
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = item.title;
+      img.onclick = () => showDetails(item, img);
+      nav.appendChild(img);
+
+      // Seleccionar automáticamente la primera imagen
+      if (index === 0) {
+        showDetails(item, img);
+        img.classList.add("selected");
+        currentSelected = img;
+      }
+    });
+  </script>
+</body>
+</html>
