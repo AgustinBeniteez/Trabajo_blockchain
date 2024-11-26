@@ -20,14 +20,23 @@
     }
 
     nav {
-    width: 29%;
-    background-color: #4B1030;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 2%;
-    box-sizing: border-box;
-}
+      width: 29%;
+      background-color: #4B1030;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 2%;
+      box-sizing: border-box;
+      overflow-y: scroll; /* Permitir scroll vertical */
+      max-height: 100vh; /* Limitar altura al tamaño de la pantalla */
+      scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+      scroll-behavior: smooth; /* Desplazamiento suave */
+    }
+
+    nav::-webkit-scrollbar {
+      display: none; /* Ocultar scrollbar en navegadores WebKit */
+    }
+
 
     nav img {
       width: 95%;
@@ -182,14 +191,24 @@
         link: "page1.html"
       },
       {
-        title: "¿Para qué sirve Blockchain?",
+        title: "Aplicaciones actuales",
         image: "imgs/explicacion2trabajo.png",
         link: "page2.html"
       },
       {
-        title: "¿como funciona un Blockchain?",
+        title: "Ventajas y desventajas que aporta la tecnología",
         image: "imgs/explicacion3trabajo.png",
         link: "page3.html"
+      },
+      {
+        title: "Desafíos y riesgos",
+        image: "imgs/explicacion4trabajo.png",
+        link: "page4.html"
+      },
+      {
+        title: "Tendencias futuras y que cambios puede traer al mundo digital",
+        image: "imgs/explicacion5trabajo.png",
+        link: "page4.html"
       }
     ];
 
@@ -247,6 +266,9 @@
         currentSelected = img;
       }
     });
+
+
+
   </script>
 </body>
 </html>
