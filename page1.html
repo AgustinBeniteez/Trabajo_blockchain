@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blockchain es una tecnología descentralizada que permite almacenar información en una red de computadoras. Esta página explica qué es Blockchain.">
+  <meta name="keywords" content="Blockchain, Tecnología, Descentralización">
+  <meta name="author" content="Agustín Benítez López">
+  <link rel="icon" href="imgs/icono.png" type="image/x-icon">
+  <title>¿Qué es Blockchain?</title>
+  <style>
+    body {
+      background-color: #4B1030;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .content {
+      max-width: 800px;
+      text-align: justify;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #6e1144;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .image-container {
+      margin-top: 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #832c5c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .next-button:hover {
+      background-color: #6e1144;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <h1>¿Qué es Blockchain?</h1>
+  <img style="width: 60%;" src="imgs/explicacion1PNGtrabajo.png" alt="¿Qué es Blockchain?">
+  <div class="content" id="content1" style="display: none;">
+    <h2>¿Qué es Blockchain?</h2>
+    <p>Blockchain es una tecnología de almacenamiento de información en una estructura descentralizada y segura.</p>
+  </div>
+  <div class="content" id="content2" style="display: none;">
+    <h2>¿Cómo funciona Blockchain?</h2>
+    <p>Funciona de la siguiente forma: tenemos una base de datos, esa base de datos está dividida por bloques, estos bloques no están centralizados, están distribuidos entre una gran gama de ordenadores, estando duplicados y relacionados entre sí. </p>
+    <p>La principal función es cuando queremos modificar información, para modificar información necesitaremos que todos los bloques distribuidos acepten la modificación, esto añade una capa de seguridad total entre la red, necesitando la aprobación de todos para hacer un cambio.</p>
+    <svg width="600" height="500" xmlns="http://www.w3.org/2000/svg">
+      <!-- Nodos -->
+      <rect x="50" y="50" width="50" height="50" fill="blue" />
+      <rect x="400" y="50" width="50" height="50" fill="blue" />
+      <rect x="50" y="400" width="50" height="50" fill="blue" />
+      <rect x="400" y="400" width="50" height="50" fill="blue" />
+      <rect x="225" y="225" width="50" height="50" fill="blue" />
+    
+      <!-- Nodo extra (📋) -->
+      <rect x="500" y="225" width="50" height="50" fill="green" />
+      <text x="515" y="255" font-size="20" fill="white">📋</text>
+    
+      <!-- Emojis en los nodos -->
+      <text id="node1" x="65" y="85" font-size="20" fill="white">✅</text>
+      <text id="node2" x="415" y="85" font-size="20" fill="white">✅</text>
+      <text id="node3" x="65" y="435" font-size="20" fill="white">✅</text>
+      <text id="node4" x="415" y="435" font-size="20" fill="white">✅</text>
+      <text id="node5" x="240" y="255" font-size="20" fill="white">✅</text>
+    
+      <!-- Líneas animadas -->
+      <line x1="250" y1="250" x2="525" y2="250" stroke="black" stroke-width="2" stroke-dasharray="275" stroke-dashoffset="275">
+        <animate attributeName="stroke-dashoffset" from="275" to="0" begin="4s" dur="2s" repeatCount="indefinite" />
+      </line>
+      <line x1="75" y1="75" x2="250" y2="250" stroke="black" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200">
+        <animate attributeName="stroke-dashoffset" from="200" to="0" begin="1s" dur="2s" repeatCount="indefinite" />
+      </line>
+      <line x1="425" y1="75" x2="250" y2="250" stroke="black" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200">
+        <animate attributeName="stroke-dashoffset" from="200" to="0" begin="2s" dur="2s" repeatCount="indefinite" />
+      </line>
+      <line x1="75" y1="425" x2="250" y2="250" stroke="black" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200">
+        <animate attributeName="stroke-dashoffset" from="200" to="0" begin="3s" dur="2s" repeatCount="indefinite" />
+      </line>
+      <line x1="425" y1="425" x2="250" y2="250" stroke="black" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200">
+        <animate attributeName="stroke-dashoffset" from="200" to="0" begin="3.5s" dur="2s" repeatCount="indefinite" />
+      </line>
+    
+      <!-- Animación de cambio de estados -->
+      <text>
+        <animate attributeName="visibility" from="hidden" to="visible" begin="6s" dur="0.1s" fill="freeze" />
+        <set attributeName="textContent" to="❌" begin="6s" dur="0.1s" fill="freeze" />
+      </text>
+      <set id="changeAllToX" attributeName="textContent" to="❌" begin="6s" fill="freeze" />
+    </svg>
+    
+  </div>
+  <div class="content" id="content3" style="display: none;">
+    <h2>Si nos adentramos en su funcionamiento</h2>
+    <p>cada bloque almacenará un hash o código único, este código único lo compartirá con el siguiente bloque de la cadena, este bloque lo hará consecutivamente. Esto formará una cadena de bloques <b>“blockchain”</b></p>
+  </div>
+  <div class="content" id="content4" style="display: none;">
+    <h2>Su sistema de seguridad</h2>
+    <p>Su sistema de seguridad se basará en comprobar la información con el bloque de la cadena anterior y confirmar el cambio.</p>
+  </div>
+  <div class="image-container" id="image-container" style="display: none;">
+    <img src="imgs/explicacion1PNGtrabajo.png" alt="Diagrama de Blockchain" style="width: 70%;">
+  </div>
+  <button class="next-button" id="next-button" onclick="showNextStep()">Siguiente</button>
+
+  <script>
+    let currentStep = 0;
+    const steps = [
+      document.getElementById("content1"),
+      document.getElementById("content2"),
+      document.getElementById("content3"),
+      document.getElementById("content4"),
+      document.getElementById("image-container")
+    ];
+    const nextButton = document.getElementById("next-button");
+
+    function showNextStep() {
+      if (currentStep < steps.length) {
+        steps[currentStep].style.display = "block";
+        steps[currentStep].style.animationDelay = `${currentStep * 0.5}s`;
+        currentStep++;
+      }
+
+      if (currentStep === steps.length) {
+        nextButton.textContent = "Volver al índice";
+        nextButton.onclick = () => window.history.back();
+      }
+    }
+
+    // Mostrar el botón de "Siguiente" después de un tiempo
+    window.onload = () => {
+      nextButton.style.display = "block";
+    };
+  </script>
+</body>
+</html>
