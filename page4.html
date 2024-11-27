@@ -3,18 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blockchain es una tecnología descentralizada que permite almacenar información en una red de computadoras. Esta página explica los desafíos y riesgos asociados a Blockchain.">
-  <meta name="keywords" content="Blockchain, Tecnología, Descentralización, Desafíos, Riesgos">
-  <meta name="author" content="Agustín Benítez López">
-  <link rel="icon" href="imgs/icono.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
-  <title>Desafíos y Riesgos de Blockchain</title>
+  <title>Desafíos Técnicos y Riesgos de Seguridad</title>
   <style>
-    /* Aplicar la tipografía Azeret Mono a toda la página */
     body {
       background-color: #4B1030;
       color: white;
-      font-family: 'Azeret Mono', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
       display: flex;
@@ -23,185 +17,109 @@
     }
 
     h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #6E1144;
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .section-content {
+      width: 75%;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .section-image {
+      /* width: 20%; */
+      /* background-color: #8A1A4C; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      font-size: 1rem;
+      border-radius: 5px;
       text-align: center;
-      margin-top: 30px;
-      color: white;
-      animation: fadeIn 1.5s ease-out forwards;
-      font-size: 46px;
+      padding: 10px;
     }
 
-    /* Título Desafíos con Gradiente Verde */
-    .challenges-title {
-        background: linear-gradient(90deg, #2da16f, #13998e);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 96px;
-        font-family: Azeret Mono, sans-serif;
-        font-weight: 400;
-        word-wrap: break-word;
-        text-align: center;
-        padding: 20px;
-        width: 600px;
-    }
-
-    /* Título Riesgos con Gradiente Rojo-Magenta */
-    .risks-title {
-      width: 726px;
-      background: linear-gradient(90deg, #C321C6, #f44336);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 96px;
-      font-family: Azeret Mono, sans-serif;
-      font-weight: 400;
-      word-wrap: break-word;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .content {
-      max-width: 1000px;
-      text-align: justify;
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #6e1144;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-    .challenges {
-      background: linear-gradient(90deg, #438b35, #3a928b);
-      color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    .risks {
-      background: linear-gradient(90deg, #C321C6, #f44336);
-      color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    .challenges ul, .risks ul {
-      padding-left: 20px;
-      line-height: 1.6;
-    }
-
-    /* Nuevos estilos para los iconos de lista */
-    .challenges li, .risks li {
-      font-size: 18px;
-      margin-bottom: 15px;
-      position: relative;
-      padding-left: 10px; /* Espaciado para el punto */
-    }
-
-    /* Animación para mostrar elementos */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .next-button {
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #832c5c;
+    .boton_volver {
+      background-color: #6E1144;
       color: white;
       border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      opacity: 0;
-      animation: fadeIn 1s ease-out forwards;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 26px;
+      text-decoration: none;
     }
-
-    .next-button:hover {
-      background-color: #6e1144;
+    .boton_volver:hover {
+      background-color: #6e3555;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 26px;
+      text-decoration: none;
+    }
+    p, li {
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
-    <h1 style="font-family: Arial, sans-serif; font-size: 3rem; font-weight: bold; text-align: center;">
-        <svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!-- Definición del degradado magenta a naranja -->
-            <defs>
-              <linearGradient id="magenta-to-orange" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color: #2e9279; stop-opacity: 1" /> <!-- Verde agua -->
-                <stop offset="100%" style="stop-color: #24afb4; stop-opacity: 1" /> <!-- Azul claro -->
-              </linearGradient>
-            </defs>
-            
-            <!-- Aplicación del degradado al path -->
-            <path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z" fill="url(#magenta-to-orange)" />
-          </svg>
-        <span style="background: linear-gradient(to right, #438b35, #3a928b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            Desafíos
-        </span>
-        <span style="color: #9b3581;">&</span>
-        <span style="background: linear-gradient(to right, #C321C6, #f44336); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            Riesgos
-        </span>
-    </h1>
+  <h1 style="font-size: 60px;">Desafíos Técnicos y Riesgos de Seguridad</h1>
 
-  <!-- Desafíos -->
-  <div class="content" id="content1" style="display: none;">
-    <div class="challenges-title">Desafíos &nbsp; <svg width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <!-- Definición del degradado magenta a naranja -->
-        <defs>
-          <linearGradient id="magenta-to-orange" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color: #C321C6; stop-opacity: 1" /> <!-- Magenta -->
-            <stop offset="100%" style="stop-color: #FFA500; stop-opacity: 1" /> <!-- Naranja -->
-          </linearGradient>
-        </defs>
-        
-        <!-- Aplicación del degradado al path -->
-        <path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z" fill="url(#magenta-to-orange)" />
-      </svg>
-      </div>
-    <div class="challenges">
-      <h3>Desafíos principales</h3>
+  <div class="section">
+    <div class="section-content">
+      <h2 class="section-title" style="font-size: 50px; color: #6c7ddf;">Desafíos Técnicos</h2>
+      <h3 style="font-size: 30px;">- Escalabilidad</h3>
+      <p> La capacidad de procesar un gran volumen de transacciones de manera rápida y eficiente sigue siendo un desafío.</p>
+      <p><b>Posibles soluciones:</b></p>
       <ul>
-        <li><b>Escalabilidad:</b> La tecnología aún enfrenta problemas para manejar un gran volumen de transacciones de manera eficiente.</li>
-        <li><b>Consumo de energía:</b> El proceso de validación, en especial en sistemas como Bitcoin, requiere una gran cantidad de recursos energéticos.</li>
-        <li><b>Interoperabilidad:</b> La falta de estándares comunes entre diferentes plataformas Blockchain puede dificultar la integración.</li>
-        <li><b>Regulación:</b> La falta de claridad legal y regulatoria en algunos países crea incertidumbre para la adopción masiva.</li>
+        <li><b>Sharding:</b> Dividir la blockchain en fragmentos más pequeños para procesar transacciones en paralelo.</li>
+        <li><b>Rollups:</b> Agrupar múltiples transacciones en una sola para reducir el tamaño de los bloques.</li>
+      </ul>
+      <h3 style="font-size: 30px;">- Consumo energético</h3>
+      <p>Consumen una gran cantidad de energía por el uso de computadoras y redes de nodos.</p>
+      <p><b>Posibles soluciones:</b></p>
+      <ul>
+        <li><b>Prueba de estaca:</b> Utilizar algoritmos de consenso que no requieran una gran cantidad de energía computacional.</li>
+        <li><b>Hardware más eficiente:</b> Desarrollar hardware especializado para la minería de criptomonedas.</li>
       </ul>
     </div>
+    <div class="section-image"><img style="width:100%;" src="imgs/iocns_trabajo1.png" alt="representación de Escalabilidad & Consumo energético"></div>
   </div>
-
-  <!-- Riesgos -->
-  <div class="content" id="content2" style="display: none;">
-    <div class="risks-title">Riesgos</div>
-    <div class="risks">
-      <h3>Riesgos asociados</h3>
+  <div class="section">
+    <div class="section-content">
+      <h2 class="section-title" style="font-size: 50px;  color: #ccb21f;">Riesgos de Seguridad</h2>
+      <h3 style="font-size: 30px;">- Vulnerabilidades:</h3>
+      <p> Los contratos inteligentes, si no están bien diseñados, pueden contener vulnerabilidades que pueden ser explotadas por atacantes.</p>
+      <p><b>Posibles soluciones:</b></p>
       <ul>
-        <li><b>Riesgo de seguridad:</b> A pesar de ser segura, la Blockchain no es inmune a ataques, especialmente en redes con baja adopción.</li>
-        <li><b>Volatilidad:</b> El valor de las criptomonedas y activos basados en Blockchain puede experimentar grandes fluctuaciones.</li>
-        <li><b>Fraudes y estafas:</b> Algunos proyectos Blockchain son fraudulentos, lo que puede resultar en pérdidas para los inversores.</li>
-        <li><b>Privacidad:</b> Aunque Blockchain es transparente, puede ser un desafío proteger la privacidad de los usuarios.</li>
+        <li>Auditorías de contratos inteligentes: Revisar cuidadosamente el código de los contratos inteligentes antes de su despliegue.</li>
+      </ul>
+      <h3 style="font-size: 30px;">- Pérdida de claves: </h3>
+      <p>La pérdida de las claves privadas puede resultar en la pérdida irrecuperable de los fondos.</p>
+      <p><b>Posibles soluciones:</b></p>
+      <ul>
+        <li><b>Seguros:</b> Protegerse contra pérdidas financieras mediante seguros especializados.</li>
       </ul>
     </div>
+    <div class="section-image"><img style="width:70%;" src="imgs/iocns_trabajo2.png" alt="representación de vulnerabilidades & pérdida de claves"></div>
   </div>
-
-  <!-- Botón para avanzar -->
-  <button class="next-button" onclick="showContent()">Siguiente</button>
-
-  <script>
-    function showContent() {
-      // Muestra los contenidos de Desafíos y Riesgos
-      document.getElementById("content1").style.display = "block";
-      document.getElementById("content2").style.display = "block";
-      document.querySelector(".next-button").style.display = "none"; // Ocultar el botón
-    }
-  </script>
+  <a href="index.html" class="boton_volver">
+   Volver al Índice
+  </a>
 </body>
 </html>
