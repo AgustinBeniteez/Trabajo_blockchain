@@ -6,4 +6,4 @@ TRABAJO DE BLOCKCHAIN HTML tiene el index.html que es la portada, si abres el in
 en el ultimo en el html5.html te lleva a el aboutus que te da la despedida y las gracias y ponen nuestros nombres.
 
 puedes ver el Documento sin presentacion aqui:
-Blockchain AgustinBL_MarcosGJ_DanielGO.pdf
+![text](https://github.com/user-attachments/assets/480b3e23-b548-43b9-90df-543c82c04830)
