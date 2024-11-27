@@ -96,12 +96,42 @@
     <h3>1.Creación de la Transacción:</h3>
     <p>Un usuario inicia una transacción enviando una cantidad de criptomonedas a otro usuario. incluyendo las direcciones de las billeteras (wallets💰) del remitente y destinatario, y cantidad.
       </p>
+      <svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fondo transparente -->
+        <rect width="800" height="500" fill="transparent" />
+      
+        <!-- Usuarios -->
+        <!-- Juan -->
+        <circle cx="150" cy="250" r="50" fill="#4CAF50" />
+        <text x="125" y="260" font-size="20" fill="white">Juan</text>
+        
+        <!-- María -->
+        <circle cx="650" cy="250" r="50" fill="#2196F3" />
+        <text x="625" y="260" font-size="20" fill="white">María</text>
+        
+        <!-- Bloque de la Blockchain -->
+        <rect x="370" y="150" width="100" height="100" fill="#FFC107" />
+        <text x="385" y="210" font-size="16" fill="black">Blockchain</text>
+      
+        <!-- Check verde al lado de Blockchain -->
+        <text id="check" x="490" y="210" font-size="30" fill="green" visibility="hidden"></text>
+        
+        <!-- Animación de visibilidad del check después de 4 segundos -->
+        <animate attributeName="visibility" from="hidden" to="visible" begin="4s" dur="0.1s" fill="freeze" />
+      
+        <!-- Línea de Juan a Blockchain -->
+        <line x1="200" y1="250" x2="370" y2="200" stroke="gray" stroke-width="2" stroke-dasharray="5 5" />
+        
+        <!-- Línea de Blockchain a María -->
+        <line x1="470" y1="200" x2="600" y2="250" stroke="gray" stroke-width="2" stroke-dasharray="5 5" />
+      </svg>
     <h3>2.Transmisión a la Red:</h3>
     <p>La transacción es transmitida a una red de nodos (computadoras) distribuidos por todo el mundo. Cada nodo contiene una copia de la blockchain y participa en la validación de las transacciones.</p>
-      <img style="width: 100%;" src="imgs/verificacion_transaccion.png" alt="verificacion_transaccion">
+    <img style="width: 100%;" src="imgs/verificacion_sintransaccion.png" alt="verificacion_transaccion">
     <h3>3.Validación de la Transacción:</h3>
       <p>Los nodos verifican la autenticidad de la transacción. Para ello, se aseguran de que Juan tenga suficientes Bitcoins para realizar la transferencia y que no esté intentando gastar la misma cantidad dos veces (problema de doble gasto).
       </p>
+      <img style="width: 100%;" src="imgs/verificacion_transaccion.png" alt="verificacion_transaccion">
     <h3>4.Agrupación en un Bloque:</h3>
     <p>Una vez verificada, la transacción se agrupa con otras transacciones recientes en un bloque. Este bloque aún no está confirmado.
       </p>
