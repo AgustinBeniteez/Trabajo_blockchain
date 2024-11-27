@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blockchain es una tecnología descentralizada que permite almacenar información en una red de computadoras. Esta página explica qué es Blockchain.">
+  <meta name="keywords" content="Blockchain, Tecnología, Descentralización">
+  <meta name="author" content="Agustín Benítez López">
+  <link rel="icon" href="imgs/icono.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+  <title>Ventajas y Desventajas de Blockchain</title>
+  <style>
+    /* Aplicar la tipografía Azeret Mono a toda la página */
+    body {
+      background-color: #4B1030;
+      color: white;
+      font-family: 'Azeret Mono', sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+      animation: fadeIn 1.5s ease-out forwards;
+      font-size: 46px;
+    }
+
+    /* Título Ventajas con Gradiente Verde */
+    .advantages-title {
+        background: linear-gradient(90deg, #2da16f, #13998e);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 96px;
+        font-family: Azeret Mono, sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
+        text-align: center;
+        padding: 20px;
+        width: 600px;
+    }
+
+    /* Título Desventajas con Gradiente Rojo-Magenta */
+    .disadvantages-title {
+      width: 726px;
+      background: linear-gradient(90deg, #C321C6, #f44336);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 96px;
+      font-family: Azeret Mono, sans-serif;
+      font-weight: 400;
+      word-wrap: break-word;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content {
+      max-width: 1000px;
+      text-align: justify;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #6e1144;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .advantages {
+      background: linear-gradient(90deg, #438b35, #3a928b);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .disadvantages {
+      background: linear-gradient(90deg, #C321C6, #f44336);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .advantages ul, .disadvantages ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    /* Nuevos estilos para los iconos de lista */
+    .advantages li, .disadvantages li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 10px; /* Espaciado para el punto */
+    }
+
+
+    /* Animación para mostrar elementos */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .next-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #832c5c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .next-button:hover {
+      background-color: #6e1144;
+    }
+  </style>
+</head>
+<body>
+    <h1 style="font-family: Arial, sans-serif; font-size: 3rem; font-weight: bold; text-align: center;">
+        <svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!-- Definición del degradado magenta a naranja -->
+            <defs>
+              <linearGradient id="magenta-to-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #2e9279; stop-opacity: 1" /> <!-- Verde agua -->
+                <stop offset="100%" style="stop-color: #24afb4; stop-opacity: 1" /> <!-- Azul claro -->
+              </linearGradient>
+            </defs>
+            
+            <!-- Aplicación del degradado al path -->
+            <path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z" fill="url(#magenta-to-orange)" />
+          </svg>
+        <span style="background: linear-gradient(to right, #438b35, #3a928b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Ventajas
+        </span>
+        <span style="color: #9b3581;">&</span>
+        <span style="background: linear-gradient(to right, #C321C6, #f44336); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            desventajas
+        </span>
+        <svg  width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!-- Definición del degradado de verde agua a azul claro -->
+            <defs>
+              <linearGradient id="aqua-to-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #C321C6; stop-opacity: 1" /> <!-- Magenta -->
+                <stop offset="100%" style="stop-color: #FFA500; stop-opacity: 1" /> <!-- Naranja -->
+              </linearGradient>
+            </defs>
+          
+            <!-- Aplicación del degradado al path -->
+            <path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z" fill="url(#aqua-to-blue)" />
+          </svg>
+    </h1>
+
+  <!-- Ventajas -->
+  <div class="content" id="content1" style="display: none;">
+    <div class="advantages-title">Ventajas &nbsp; <svg width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <!-- Definición del degradado magenta a naranja -->
+        <defs>
+          <linearGradient id="magenta-to-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: #C321C6; stop-opacity: 1" /> <!-- Magenta -->
+            <stop offset="100%" style="stop-color: #FFA500; stop-opacity: 1" /> <!-- Naranja -->
+          </linearGradient>
+        </defs>
+        
+        <!-- Aplicación del degradado al path -->
+        <path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z" fill="url(#magenta-to-orange)" />
+      </svg>
+      </div>
+    <div class="advantages">
+      <h3>Beneficios principales</h3>
+      <ul>
+        <li><b>Descentralización:</b> No depende de una autoridad central, lo que reduce el riesgo de fallos o manipulaciones.</li>
+        <li><b>Seguridad:</b> La información es inmutable y se valida mediante consenso, lo que hace que los datos sean muy difíciles de alterar.</li>
+        <li><b>Transparencia:</b> Todos los participantes tienen acceso a los mismos datos, lo que fomenta la confianza y la transparencia.</li>
+        <li><b>Reducción de costos:</b> Elimina intermediarios, lo que puede reducir costes y aumentar la eficiencia en transacciones.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Desventajas -->
+  <div class="content" id="content2" style="display: none;">
+    <div class="disadvantages-title"><div class="disadvantages-title"> Desventajas &nbsp;<svg  width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <!-- Definición del degradado de verde agua a azul claro -->
+        <defs>
+          <linearGradient id="aqua-to-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: #2e9279; stop-opacity: 1" /> <!-- Verde agua -->
+            <stop offset="100%" style="stop-color: #24afb4; stop-opacity: 1" /> <!-- Azul claro -->
+          </linearGradient>
+        </defs>
+      
+        <!-- Aplicación del degradado al path -->
+        <path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z" fill="url(#aqua-to-blue)" />
+      </svg> 
+      </div></div>
+    <div class="disadvantages">
+      <h3>Posibles inconvenientes</h3>
+      <ul>
+        <li><b>Consumo de energía:</b> El proceso de validación (especialmente en criptomonedas) puede consumir una gran cantidad de energía.</li>
+        <li><b>Escalabilidad:</b> A medida que la red crece, puede haber problemas para mantener un rendimiento eficiente debido al tamaño de la cadena de bloques.</li>
+        <li><b>Falta de regulación:</b> La tecnología aún carece de una regulación adecuada, lo que podría generar incertidumbre legal y financiera.</li>
+        <li><b>Adopción limitada:</b> Aunque está en crecimiento, muchas empresas y gobiernos aún no han adoptado blockchain a gran escala.</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="next-button" id="next-button" onclick="showNextStep()">Siguiente</button>
+
+  <script>
+    let currentStep = 0;
+    const steps = [
+      document.getElementById("content1"),
+      document.getElementById("content2")
+    ];
+    const nextButton = document.getElementById("next-button");
+
+    function showNextStep() {
+      if (currentStep < steps.length) {
+        steps[currentStep].style.display = "block";
+        steps[currentStep].style.animationDelay = `${currentStep * 0.5}s`;
+        currentStep++;
+      }
+
+      if (currentStep === steps.length) {
+        nextButton.textContent = "Volver al índice";
+        nextButton.onclick = () => window.history.back();
+      }
+    }
+
+    // Mostrar el botón de "Siguiente" después de un tiempo
+    window.onload = () => {
+      nextButton.style.display = "block";
+    };
+  </script>
+</body>
+</html>
