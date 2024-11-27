@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blockchain es una tecnología descentralizada que permite almacenar información en una red de computadoras. Esta página explica qué es Blockchain.">
   <meta name="keywords" content="Blockchain, Tecnología, Descentralización">
   <meta name="author" content="Agustín Benítez López">
   <link rel="icon" href="imgs/icono.png" type="image/x-icon">
@@ -90,13 +89,34 @@
   <img style="width: 60%;" src="imgs/explicacion2PNGtrabajo.png" alt="¿Qué es Blockchain?">
   <div class="content" id="content1" style="display: none;">
     <h2>Aplicaciones actuales del Blockchain</h2>
-    <p>Hoy en día se utiliza la blockchain en los ámbitos de las Criptomonedas, Contratos inteligentes, Identidad digital, etc..</p>
+    <p>Hoy en día se utiliza la blockchain en el ámbito de las Criptomonedas, Contratos inteligentes, Identidad digital, etc...</p>
   </div>
   <div class="content" id="content2" style="display: none;">
-    <h2>¿Cómo funciona Blockchain?</h2>
-    <p>Funciona de la siguiente forma: tenemos una base de datos, esa base de datos está dividida por bloques, estos bloques no están centralizados, están distribuidos entre una gran gama de ordenadores, estando duplicados y relacionados entre sí. </p>
-    <p>La principal función es cuando queremos modificar información, para modificar información necesitaremos que todos los bloques distribuidos acepten la modificación, esto añade una capa de seguridad total entre la red, necesitando la aprobación de todos para hacer un cambio.</p>
-    <svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+    <h2>La blockchain en las Criptomonedas</h2>
+    <h3>1.Creación de la Transacción:</h3>
+    <p>Un usuario inicia una transacción enviando una cantidad de criptomonedas a otro usuario. Esta transacción incluye las direcciones de las billeteras (wallets) del remitente y del destinatario, así como la cantidad transferida.
+      Ejemplo: Juan quiere enviar 2 Bitcoins a María.</p>
+    <h3>2.Transmisión a la Red:</h3>
+    <p>La transacción es transmitida a una red de nodos (computadoras) distribuidos por todo el mundo. Cada nodo contiene una copia de la blockchain y participa en la validación de las transacciones.
+      Ejemplo: La transacción de Juan se envía a la red de Bitcoin.</p>
+      <h3>3.Validación de la Transacción:</h3>
+      <p>Los nodos verifican la autenticidad de la transacción. Para ello, se aseguran de que Juan tenga suficientes Bitcoins para realizar la transferencia y que no esté intentando gastar la misma cantidad dos veces (problema de doble gasto).
+        Ejemplo: Los nodos verifican que la billetera de Juan tiene al menos 2 Bitcoins y que no ha gastado esos Bitcoins en otra transacción.
+      </p>
+    <h3>4.Agrupación en un Bloque:</h3>
+    <p>Una vez verificada, la transacción se agrupa con otras transacciones recientes en un bloque. Este bloque aún no está confirmado.
+      Ejemplo: La transacción de Juan se agrupa con otras transacciones en un nuevo bloque en la red de Bitcoin.</p>
+    <h3>5.Prueba de Trabajo (Proof of Work):</h3>
+    <p>Los nodos compiten para resolver un complejo problema matemático. El primer nodo en resolver el problema añade el nuevo bloque a la blockchain y recibe una recompensa en criptomonedas (minería).
+      Ejemplo: Un nodo resuelve el problema y añade el bloque con la transacción de Juan a la blockchain de Bitcoin.</p>
+    <h3>6.Confirmación y Añadido a la Blockchain:</h3>
+    <p>Una vez resuelto el problema, el nuevo bloque se añade a la cadena de bloques existente. Todas las copias de la blockchain en la red se actualizan para incluir el nuevo bloque.
+      Ejemplo: El bloque que contiene la transacción de Juan se añade a la blockchain de Bitcoin, y todas las copias de la blockchain se actualizan.</p>
+    <h3>7.Transacción Completa:</h3>
+    <p>La transacción está ahora confirmada y registrada en la blockchain. El destinatario (María) puede ver que ha recibido los Bitcoins, y el saldo de la billetera del remitente (Juan) se actualiza.
+      Ejemplo: María recibe 2 Bitcoins en su billetera, y el saldo de la billetera de Juan se reduce en 2 Bitcoins.</p>
+      
+      <svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
       <!-- Fondo transparente -->
       <rect width="800" height="500" fill="transparent" />
     
